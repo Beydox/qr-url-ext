@@ -1,0 +1,21 @@
+{
+	"name": "QR-code generate Extension",
+	"manifest_version": 3,
+	"version": "1.0.0",
+	"description": "The extension generates a QR code from the URL link's on page, making it easy to share links across devices with just a scan",
+	"icons": {
+		"48": "icon.png",
+		"128": "icon.png"
+	},
+	"permissions": ["contextMenus","storage"],
+	"background": {
+    "service_worker": "background.js",
+	"type": "module"
+	},
+	"action": {
+		"default_title": "Open popup to get a QR-code",
+		"default_popup": "popup.html"
+	},
+	"options_page": "options.html"
+	
+}
