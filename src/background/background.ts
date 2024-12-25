@@ -13,6 +13,8 @@ let contextMenuItem: chrome.contextMenus.CreateProperties  = {
 
     const copyToPopup = (content: chrome.contextMenus.OnClickData) => {
          setStoredCode(content.linkUrl)
+         chrome.action.setBadgeBackgroundColor({ color: "green" });
+         chrome.action.setBadgeText({ text: 'qr' });
     }
 
     chrome.contextMenus.removeAll(function() {
@@ -24,3 +26,9 @@ let contextMenuItem: chrome.contextMenus.CreateProperties  = {
             copyToPopup(info); // Передаем URL ссылки
         }
     });
+
+chrome.storage.onChanged.addListener((changes, namespace) => {
+    for (let [key, { oldValue, newValue }] of Object.entries(changes)) {
+        if (newValue === '') chrome.action.setBadgeText({ text: '' });
+    }
+});
