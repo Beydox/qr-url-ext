@@ -1,13 +1,18 @@
 ### README.md
 # <img src="https://github.com/Beydox/qr-url-ext/blob/master/src/static/icon.png" height="75"/> QR-code generate Extension
+![React](https://img.shields.io/badge/React-18.0+-blue?logo=react)  
+![Chrome](https://img.shields.io/badge/Chrome-Extension-red?logo=googlechrome)  
+![TypeScript](https://img.shields.io/badge/TypeScript-4.0+-blue?logo=typescript)
 
 The extension generates a QR code from the URL link's on page, making it easy to share links across devices with just a scan. The extension was developed using **React**, **TypeScript**, and **Material-UI (MUI)**. 
 
 ## Features
 
-- **UPDATE** Content will come soon
-- **UPDATE** Content will come soon
-- **UPDATE** Content will come soon
+- **Generate QR code** for any link on the page.
+- Modern and responsive interface built with **Material-UI (MUI)** 
+- Links are processed locally without being sent to any server
+- **How it works:** right-click on the link, then click on the extension icon in the context menu
+- **To get QR code** open Extension's popup window
 - **Manifest V3** compatibility.
 
 ## Getting Started
